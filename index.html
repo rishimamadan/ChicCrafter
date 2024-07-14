@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header circleBehind">
+        <a alt="home">HOME</a>
+        <a alt="avatar">AVATAR</a>
+        <a href="Posts/postsIndex.html" alt="posts">POSTS</a>
+        <a alt="contact">CONTACT US</a>
+      </div>
+    </header>
+
+    <br>
+
+    <div class="container">
+      <div class="top-buttons">
+          <button class="custom-btn btn" onclick="toggleOptions('men-options', 'men-avatar')">Men</button>
+          <button class="custom-btn btn" onclick="toggleOptions('women-options', 'women-avatar')">Women</button>
+      </div>
+      <div id="men-options" class="options hidden">
+          <button class="custom-btn btn" onclick="showImages('shirts')">Shirts</button>
+          <button class="custom-btn btn" onclick="showImages('pants')">Pants</button>
+          <button class="custom-btn btn" onclick="showImages('suits')">Suits</button>
+          <button class="custom-btn btn" onclick="showImages('shorts')">Shorts</button>
+      </div>
+      <div id="women-options" class="options hidden">
+          <button class="custom-btn btn" onclick="showImages('dresses')">Dresses</button>
+          <button class="custom-btn btn" onclick="showImages('skirts')">Skirts</button>
+          <button class="custom-btn btn" onclick="showImages('blouses')">Blouses</button>
+          <button class="custom-btn btn" onclick="showImages('shortsW')">Shorts</button>
+          <button class="custom-btn btn" onclick="showImages('jeans')">Jeans</button>
+      </div>
+      <div id="avatar-container" class="avatar-container hidden">
+          <img id="men-avatar" class="avatar hidden" src="Images/avatarMan.jpg" alt="Men Avatar">
+          <img id="women-avatar" class="avatar hidden" src="Images/avatarWoman.jpg" alt="Women Avatar">
+          <!-- <img id="clothing-item" class="clothing-item hidden" src="" alt=""> -->
+          <img id="shirt-suit-item" class="clothing-item hidden" src="" alt="">
+          <img id="pant-short-item" class="clothing-item hidden" src="" alt="">
+          <img id="blouse-dress-item" class="clothing-item hidden" src="" alt="">
+          <img id="skirt-short-jeans-item" class="clothing-item hidden" src="" alt="">
+          <!-- <img id="shirt-item" class="clothing-item hidden" src="" alt="">
+          <img id="shorts-item" class="clothing-item hidden" src="" alt="">
+          <img id="suits-item" class="clothing-item hidden" src="" alt="">
+          <img id="pant-item" class="clothing-item hidden" src="" alt=""> -->
+      </div>
+      <div id="side-menu" class="side-menu hidden">
+          <button onclick="closeMenu()">Close</button>
+          <!-- <button id="reset-button" onclick="resetClothingItem()">Reset</button> -->
+          <div id="image-container"></div>
+      </div>
+  </div>
+    <!-- 
+    <div id="planets">
+
+        <div id="holdit">
+        <div class="base">
+          <img src="https://na.cx/i/ADqm20.png">
+        </div>
+      
+        <div class="animals">
+          <div id="resetanimals" class="hold"></div>
+          <div id="rabbit" class="hold">
+            <img src="https://na.cx/i/7Nr427.png">
+          </div>
+          <div id="wolf" class="hold">
+            <img src="https://na.cx/i/jMr0v0.png"> </div>
+        </div>
+      
+        <div class="bottoms">
+          <div id="bottomsreset" class="hold"></div>
+          <div id="skirt" class="hold">
+            <img src="https://na.cx/i/587B8y.png">
+          </div>
+          <div id="sundress" class="hold">
+            <img src="https://na.cx/i/uJJp2B.png">
+          </div>
+        </div>
+      
+        <div class="tops">
+          <div id="topsreset" class="hold">
+          </div>
+          <div id="hoodie" class="hold">
+            <img src="https://na.cx/i/60H6nv.png">
+          </div>
+        </div>
+      
+        <div class="onepiece">
+          <div id="resetonepiece" class="hold"></div>
+          <div id="leotard" class="hold">
+            <img src="https://na.cx/i/9bE00O.png">
+          </div>
+          <div id="tron" class="hold">
+            <img src="https://na.cx/i/gk33iW.png">
+          </div>
+        </div>
+      
+        <div class="accessories">
+          <div id="resetaccessories" class="hold"></div>
+          <div id="collar" class="hold">
+            <img src="https://na.cx/i/2X4hdp.png">
+          </div>
+        </div>
+      <div id="bottomcensor" class="hold"><img src="https://na.cx/i/QNzuvA.png"></div>
+        <div id="topcensor" class="hold">
+        <img src="https://na.cx/i/uk8WYV.png"></div>
+        
+        
+        <div class="selection">
+          <ul>
+            
+            
+            <li><b><br/>TOPS/JACKETS </b?</li>
+              <a href="#topsreset">
+                <li>topreset</li>
+              </a>
+               <a href="#hoodie">
+                <li>hoodie</li>
+              </a>
+              <li><b><br/>ONE PIECES (remove other stuff first!)</b></li>
+            <a href="#resetonepiece">
+              <li>reset onepiece</li>
+            </a>
+            <a href="#leotard">
+              <li>leotard</li>
+            </a>
+            <a href="#tron">
+              <li>TRON</li>
+            </a>
+            <li><b><br/>DRESSES/Bottoms</b></li>
+            <a href="#bottomsreset">
+              <li>reset dress</li>
+            </a>
+            <a href="#sundress">
+              <li>sunddress</li>
+            </a>
+              <a href="#skirt">
+              <li>skirt</li>
+            </a>
+            <li><br/><b>Animal Parts!</b></li>
+            <a href="#resetanimals">
+              <li>reset animal</li>
+            </a>
+            <a href="#rabbit">
+              <li>rabbit</li>
+            </a>
+            <a href="#wolf">
+              <li>wolf</li>
+            </a>
+            <li><b><br/>Accessories!</b></li>
+            <a href="#resetaccessories">
+              <li>reset acces.</li>
+            </a>
+            <a href="#collar">
+              <li>collar</li>
+            </a>
+          </ul>
+      
+        </div>
+      </div> -->
+  </body>
+  <script src="script.js"></script>
+</html>

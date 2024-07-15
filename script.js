@@ -3,6 +3,10 @@ let selectedShirt = null;
 let selectedShorts = null;
 let selectedPants = null;
 let selectedSuit = null;
+function closeMenu() {
+    document.getElementById("sidebar").style.width = "0";
+  }
+  
 
 function toggleOptions(optionsId, avatarId) {
     // Hide all options
@@ -19,8 +23,9 @@ function toggleOptions(optionsId, avatarId) {
     document.getElementById('women-avatar').classList.add('hidden');
     
     // Hide clothing items
-    document.getElementById('shirt-suit-item').classList.add('hidden');
+   
     document.getElementById('pant-short-item').classList.add('hidden');
+    document.getElementById('shirt-suit-item').classList.add('hidden');
     document.getElementById('blouse-dress-item').classList.add('hidden');
     document.getElementById('skirt-short-jeans-item').classList.add('hidden');
     // document.querySelectorAll('.clothing-item').forEach(item => item.classList.add('hidden'));
@@ -30,8 +35,9 @@ function toggleOptions(optionsId, avatarId) {
     // document.getElementById('shorts-item').classList.add('hidden');
 
     // Clear the src of clothing items to remove them from view
-    document.getElementById('shirt-suit-item').src = '';
+    
     document.getElementById('pant-short-item').src = '';
+    document.getElementById('shirt-suit-item').src = '';
     document.getElementById('blouse-dress-item').src = '';
     document.getElementById('skirt-short-jeans-item').src = '';
 
@@ -44,8 +50,9 @@ function toggleOptions(optionsId, avatarId) {
 
 function showImages(category) {
     const images = {
+        
+        pants: ['Images/Pant1.png', 'Images/Pant2.png','Images/Pant3.png','Images/Pant4.png'],
         shirts: ['Images/Shirt1.png', 'Images/Shirt2.png', 'Images/Shirt3.png', 'Images/Shirt4.png', 'Images/Shirt5.png'],
-        pants: ['Images/Pant1.png', 'Images/Pant2.png'],
         shorts: ['Images/Shorts1.png', 'Images/Shorts2.png', 'Images/Shorts3.png'],
         suits: ['Images/Suit1.png'],
         dresses: ['Images/Dress1.png', 'Images/Dress2.png', 'Images/Dress3.png', 'Images/Dress4.png'],
@@ -108,12 +115,52 @@ function displayClothingItem(imageSrc, category) {
 
     let itemElement;
     let clearAll = false;
-
-    if (category === 'shirts' || category === 'suits') {
+     
+   
+      
+         if (category === 'pants') {
+            itemElement = document.getElementById('pant-short-item');
+            itemElement.classList.add('pant-item');
+            itemElement.classList.remove('short-item'); // Ensure suit styles aren't applied
+        } else if (category === 'shorts') {
+            itemElement = document.getElementById('pant-short-item');
+            itemElement.classList.add('short-item');
+            itemElement.classList.remove('pant-item');
+    }  else if (category === 'shirts') {
         itemElement = document.getElementById('shirt-suit-item');
-    } else if (category === 'pants' || category === 'shorts' && document.getElementById('shirt-suit-item').src) {
-        itemElement = document.getElementById('pant-short-item');
+        itemElement.classList.add('shirt-item');
+        itemElement.classList.remove('suit-item'); // Ensure suit styles aren't applied
+    } else if (category === 'suits') {
+        itemElement = document.getElementById('shirt-suit-item');
+        itemElement.classList.add('suit-item');
+        itemElement.classList.remove('shirt-item'); // Ensure shirt styles aren't applied
     } else if (category === 'blouses') {
+        itemElement = document.getElementById('blouse-dress-item');
+    } /*else if (category === 'skirts' || category === 'shortsW' || category === 'jeans') {
+        itemElement = document.getElementById('skirt-short-jeans-item');
+        document.getElementById('blouse-dress-item').classList.add('hidden');
+        document.getElementById('blouse-dress-item').src = '';*/
+    else if (category === 'skirts') {
+        itemElement = document.getElementById('skirt-short-jeans-item');
+        itemElement.classList.add('skirt-item');
+        itemElement.classList.remove('shortsW-item');
+        itemElement.classList.remove('jeans-item'); // Ensure suit styles aren't applied
+    } else if (category === 'shortsW') {
+        itemElement = document.getElementById('skirt-short-jeans-item');
+        itemElement.classList.add('shortsW-item');
+        itemElement.classList.remove('skirt-item');
+        itemElement.classList.remove('jeans-item');
+    }
+    else if (category === 'jeans') {
+        itemElement = document.getElementById('skirt-short-jeans-item');
+        itemElement.classList.add('jeans-item');
+        itemElement.classList.remove('Skirt-item');
+        itemElement.classList.remove('shortsW-item'); // Ensure suit styles aren't applied
+    } 
+    
+    /* else if (category === 'shirts' || category === 'suits') {
+        itemElement = document.getElementById('shirt-suit-item');
+    }else if (category === 'blouses') {
         itemElement = document.getElementById('blouse-dress-item');
     } else if (category === 'skirts' || category === 'shortsW' || category === 'jeans') {
         itemElement = document.getElementById('skirt-short-jeans-item');
@@ -123,23 +170,25 @@ function displayClothingItem(imageSrc, category) {
     } else if (category === 'dresses') {
         itemElement = document.getElementById('blouse-dress-item');
         clearAll = true;
-    }
+    }*/
 
     if (clearAll) {
         // Clear all other items if a dress is selected
-        document.getElementById('shirt-suit-item').classList.add('hidden');
+       
         document.getElementById('pant-short-item').classList.add('hidden');
+        document.getElementById('shirt-suit-item').classList.add('hidden');
         document.getElementById('skirt-short-jeans-item').classList.add('hidden');
-        
-        document.getElementById('shirt-suit-item').src = '';
+
+       document.getElementById('shirt-suit-item').src = '';
         document.getElementById('pant-short-item').src = '';
+        
         document.getElementById('skirt-short-jeans-item').src = '';
     }
 
     itemElement.src = imageSrc;
     itemElement.classList.remove('hidden');
 }
-
+/*
 function resetClothingItem(category) {
     // if (category) {
     //     document.querySelectorAll(`.clothing-item.${category}`).forEach(item => item.classList.add('hidden'));
@@ -151,7 +200,23 @@ function resetClothingItem(category) {
         clothingItem.classList.add('hidden');
         clothingItem.src = '';
     }
+}*/
+function resetClothingItem() {
+    if (currentCategory === 'shirts' || currentCategory === 'suits') {
+        document.getElementById('shirt-suit-item').classList.add('hidden');
+        document.getElementById('shirt-suit-item').src = '';
+    } else if (currentCategory === 'pants' || currentCategory === 'shorts') {
+        document.getElementById('pant-short-item').classList.add('hidden');
+        document.getElementById('pant-short-item').src = '';
+    } else if (currentCategory === 'blouses' || currentCategory === 'dresses') {
+        document.getElementById('blouse-dress-item').classList.add('hidden');
+        document.getElementById('blouse-dress-item').src = '';
+    } else if (currentCategory === 'skirts' || currentCategory === 'shortsW' || currentCategory === 'jeans') {
+        document.getElementById('skirt-short-jeans-item').classList.add('hidden');
+        document.getElementById('skirt-short-jeans-item').src = '';
+    }
 }
+
 
 function closeMenu() {
     document.getElementById('side-menu').classList.add('hidden');

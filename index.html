@@ -1,99 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChicCraft</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css" />
-    <title>Studio</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div class="header circleBehind">
-        <a alt="home">HOME</a>
-        <a alt="about">ABOUT</a>
-        <a alt="studio">STUDIO</a>
-        <a href="Posts/postsIndex.html" alt="posts">POSTS</a>
-        <a alt="contact">CONTACT</a>
-      </div>
-    </header>
+            <div class="header circleBehind">
+               
+           
+                <h1 style="display: flex; align-items: start; font-size: 50px; position:absolute; font-family: 'Courier New', Courier, monospace;">ChicCrafter</h1>
+              <a alt="HOME">HOME</a>
+              <a alt="POSTS">ABOUT</a>
+              <a alt="DASHBOARD">FEATURES</a>
+              <a alt="AVATAR">STUDIO</a>
+              <a alt="CONTACT">POSTS</a>
+              <a alt="CONTACT">CONTACTS</a>
+           
+            <button id="signin-btn" class="custom-btn btn header"><a href="login.html">Sign In</a></button>
+        </div>
+        </header>
+  
 
-    <br>
+    <section>
+        <div class="left-intro">
+        
+            <h1>WELCOME TO YOUR OWN fASHION STUDIO</h1>
+            <br>
+            <br>
+            <p> 
+                Welcome to ChicCrafter Avatar Studio, where fashion meets imagination! Create your avatar, customize every detail- from skin tone to entire Myntra wardrobe – and express your unique style. Share your avatar on our platform and compete for the coveted ‘Fashion Icon of the Month’ title. Unleash your creativity and redefine style!
+                Don't just make your own fashion statement go make your own fashion avatar!! </p>
+        </div>
+        
+        <div class="right-intro">
+            <img src="logo.jpg" alt="logo" >
+        </div>
+    </section>
+    <h1 style="  text-align: center; font-family:Georgia, 'Times New Roman', Times, serif; background-color: #dfcdff; ">F E A T U R E S </h1> 
+    <section>
 
-    <div class="container">
-      <div class="top-buttons">
-          <button class="custom-btn btn" onclick="toggleOptions('men-options', 'men-avatar')">Men</button>
-          <button class="custom-btn btn" onclick="toggleOptions('women-options', 'women-avatar')">Women</button>
-      </div>
-      <div id="men-options" class="options hidden">
-          <button class="custom-btn btn" onclick="showImages('shirts')">Shirts</button>
-          <button class="custom-btn btn" onclick="showImages('pants')">Pants</button>
-          <button class="custom-btn btn" onclick="showImages('suits')">Suits</button>
-          <button class="custom-btn btn" onclick="showImages('shorts')">Shorts</button>
-      </div>
-      <div id="women-options" class="options hidden">
-          <button class="custom-btn btn" onclick="showImages('dresses')">Dresses</button>
-          <button class="custom-btn btn" onclick="showImages('skirts')">Skirts</button>
-          <button class="custom-btn btn" onclick="showImages('blouses')">Blouses</button>
-          <button class="custom-btn btn" onclick="showImages('shortsW')">Shorts</button>
-          <button class="custom-btn btn" onclick="showImages('jeans')">Lower</button>
-      </div>
-      <div id="avatar-container" class="avatar-container hidden">
-          <img id="men-avatar" class="avatar hidden" src="Images/avatarMan.jpg" alt="Men Avatar">
-          <img id="women-avatar" class="avatar hidden" src="Images/avatarWoman.jpg" alt="Women Avatar">
-          <!-- <img id="clothing-item" class="clothing-item hidden" src="" alt=""> -->
-          <img id="shirt-suit-item" class="clothing-item hidden" src="" alt="">
-          <img id="pant-short-item" class="clothing-item hidden" src="" alt="">
-          <img id="blouse-dress-item" class="clothing-item hidden" src="" alt="">
-          <img id="skirt-short-jeans-item" class="clothing-item hidden" src="" alt="">
-          <!-- <img id="shirt-item" class="clothing-item hidden" src="" alt="">
-          <img id="shorts-item" class="clothing-item hidden" src="" alt="">
-          <img id="suits-item" class="clothing-item hidden" src="" alt="">
-          <img id="pant-item" class="clothing-item hidden" src="" alt=""> -->
-      </div>
-      <div id="side-menu" class="side-menu hidden">
-          <button onclick="closeMenu()">X</button>
-          <!-- <button id="reset-button" onclick="resetClothingItem()">Reset</button> -->
-          <div id="image-container"></div>
-      </div>
-  </div>
+        
+        
+        <div class="card"><h2>Customizable and Interactive Design Interface</h2><br>Allow users to create and share unique fashion designs, experimenting with styles, 
+            fabrics, and accessories, fostering creativity and community inspiration.AI suggests trending palettes and patterns for on-trend designs.
+        </div>
+        <div class="card" ><h2>Leaderboard for Competitive Engagement</h2><br>Introduce a competitive element where users earn points and recognition 
+            based on design popularity, encouraging active engagement and excellence.
+        </div>
+        <div class="card" ><h2>Comprehensive Dashboard</h2><br> Enable users to track their designs, likes, and points, providing a clear view of 
+            achievements and motivating continuous improvement. 
+            </div>
+            
+            <div class="card" ><h2>Community and Social Engagement</h2><br>Users can publish designs on a public page with options to like and comment. 
+                Regular contests and a leaderboard showing the most liked designs keep the community active.
+            </div>
+            <div class="card" ><h2>Personalized Fashion Advice via AI-Powered Chatbot</h2><br>Utilize machine learning to analyze user preferences and 
+                current fashion trends, offering personalized fashion advice and curated options.
+            </div>
+        </section>
+            
+            <footer>
+                <div class="f-item-con">
+                    <div class="app-info">
+                        <img class="logo" src="Images/logo.jpg">
+                        <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="useful-links">
+                  <span class='app-name'><span class='app-initial'>Q</span>uick<span class='app-initial'>L</span>inks</span>
+                    <ul>
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Studio</li>
+                        <li>Posts</li>
+                        <li>Sign Up</li>
+                    </ul>
+                </div>
+                <div class="g-i-t">
+                  <div class="useful-links"><span class='app-name' style="padding-bottom: 0%;"><span class='app-initial'>G</span>et in<span class='app-initial'>T</span>ouch</span></div>
+                    <form action="/" method="post" class="space-y-2">
+                        <input type="text" name="g-name" class="g-inp" id="g-name" placeholder='Name' />
+                        <input type="email" name="g-email" class="g-inp" id="g-email" placeholder='Email' />
+                        <input type="text" name="g-msg" class="g-inp h-40 resize-none" id="g-msg"
+                            placeholder='Message...'></input>
+                        <button type="submit" class='f-btn'>Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class='cr-con'>Copyright &copy; 2024 | Made by SyntaxSavants</div>
+        </footer>
     
-    <!-- FOOTER -->
-    <footer>
-      <div class="f-item-con">
-          <div class="app-info">
-              <img class="logo" src="Images/logo.jpg">
-              <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-              
-          </div>
-          <div class="useful-links">
-            <span class='app-name'><span class='app-initial'>Q</span>uick<span class='app-initial'>L</span>inks</span>
-              <ul>
-                  <li>Home</li>
-                  <li>About Us</li>
-                  <li>Studio</li>
-                  <li>Posts</li>
-                  <li>Sign Up</li>
-              </ul>
-          </div>
-          <div class="g-i-t">
-            <div class="useful-links"><span class='app-name' style="padding-bottom: 0%;"><span class='app-initial'>G</span>et in<span class='app-initial'>T</span>ouch</span></div>
-              <form action="/" method="post" class="space-y-2">
-                  <input type="text" name="g-name" class="g-inp" id="g-name" placeholder='Name' />
-                  <input type="email" name="g-email" class="g-inp" id="g-email" placeholder='Email' />
-                  <input type="text" name="g-msg" class="g-inp h-40 resize-none" id="g-msg"
-                      placeholder='Message...'></input>
-                  <button type="submit" class='f-btn'>Submit</button>
-              </form>
-          </div>
-      </div>
-      <div class='cr-con'>Copyright &copy; 2024 | Made by SyntaxSavants</div>
-  </footer>
-  </body>
-  <script src="script.js"></script>
+   
+
+</body>
 </html>

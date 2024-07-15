@@ -82,10 +82,12 @@ section{
    margin-left: 10px;
 }
 .post{
-    background-color:white;
-    border: 2px solid rgba(219, 219, 219, 1);
-    border-radius: 3px;
-    border-bottom: 5px solid rgba(219, 219, 219, 1);
+    background-color:#dfcdff;
+    border: 4px solid #989cec;
+    border-radius: 10px;
+    /* border-bottom: 5px solid rgba(219, 219, 219, 1); */
+    margin: auto;
+    margin-bottom: 10px;
 }
 .post .post-title{
     display: flex;
@@ -110,6 +112,8 @@ margin-right: 15px;
 .post  .post-contain img{
     width: 100%;
     height: 100%;
+    border-top: 4px solid #989cec;
+    border-bottom: 4px solid #989cec;
 }
 .post .post-footer {
     display: flex;
@@ -128,7 +132,7 @@ margin-right: 15px;
 }
 .like .post-rating-button{
     cursor: pointer;
-    color: #555555;
+    color: #7c25b6;
 
 }
 .like-selected > .post-rating-button,
@@ -136,15 +140,16 @@ margin-right: 15px;
     color: #009578;
 }
 .like:not(.like-selected) > .post-rating-button:hover{
-    color: black;
+    color: #7c25b6;
 }
 .right-side{
     width:22%;
     margin-left: 60px;
-    background-color: white;
-    border: 1px solid rgba(219, 219, 219, 1);
     position: fixed;
     right: 10px;
+    background-color:#dfcdff;
+    border: 4px solid #989cec;
+    border-radius: 10px;
 }
 .right-side .profile-title{
     display: flex;
@@ -170,7 +175,7 @@ margin-right: 15px;
 /* Basic styling for the leaderboard */
 body {
     font-family: Arial, sans-serif;
-
+    color: #7c25b6;
 }
 table {
     width: 100%;
@@ -180,11 +185,7 @@ table {
 th, td {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
-th {
-    background-color: #f2f2f2;
-}
-.right-side .image .h1{
+/* .right-side .image .h1{
 
-}
+} */

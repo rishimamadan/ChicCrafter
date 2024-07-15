@@ -179,6 +179,7 @@ div.circleBehind a:hover:after {
 #image-container img {
   width: 100%;
   margin-bottom: 10px;
+  border:2px solid rgb(227, 140, 207);
 }
 
 /* Clothes */
